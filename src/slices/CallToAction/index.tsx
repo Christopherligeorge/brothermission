@@ -1,4 +1,4 @@
-import { Content } from "@prismicio/client";
+import { Content, isFilled } from "@prismicio/client";
 import { PrismicText, SliceComponentProps } from "@prismicio/react";
 import PlainLogo from "./PlainLogo";
 import Bounded from "@/components/Bounded";
@@ -31,9 +31,11 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
       <PrismicText field = {slice.primary.heading} />
     </div>
 
+    {isFilled.link(slice.primary.button_link) && (
     <ButtonLink field = {slice.primary.button_link} className = "mt-6" >
       {slice.primary.button_text || "Learn More"}
     </ButtonLink>
+    )}
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/45925352.js"></script>
     </Bounded>
   );

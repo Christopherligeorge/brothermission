@@ -1,6 +1,6 @@
 import Bounded from "@/components/Bounded";
 import ButtonLink from "@/components/ButtonLink";
-import { Content } from "@prismicio/client";
+import { Content, isFilled } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink} from "@prismicio/next";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import clsx from "clsx";
@@ -49,9 +49,11 @@ const Showcase = ({ slice }: ShowcaseProps): JSX.Element => {
               <div className="mt-4 max-w-xl prose prose-invert"> 
               <PrismicRichText field={slice.primary.body} />
               </div>
+              {isFilled.link(slice.primary.button_link) && (
               <ButtonLink field={slice.primary.button_link} className = "mt-6">
               {slice.primary.button_text || "Learn More"}
               </ButtonLink>
+              )}
               </div>
         <PrismicNextImage field={slice.primary.image} className = { clsx( 
           "opacity-90 shadow-2xl lg:col-span-2 lg:pt-0",
