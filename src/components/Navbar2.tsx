@@ -29,7 +29,7 @@ export default function NavBar({settings}: NavBarProps) {
         <div className="flex items-center justify-between"> 
         <Link href ="/">
         <YBlogo />
-        <span className = "sr-only"> Your Brother Home Page</span>
+        <span className = "sr-only">brother + Mission home page</span>
         </Link>
         <button type="button"
             className="block p-2 text-3xl text-white md:hidden"
