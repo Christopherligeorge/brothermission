@@ -23,7 +23,7 @@ export default function NavBar({ settings }: NavBarProps) {
       <div className="mx-auto flex max-w-6xl flex-col justify-between py-2 font-medium text-white md:flex-row md:items-center">
         <div className="flex items-center justify-between">
           <Link href="/" className="z-50" onClick={() => setOpen(false)}>
-            <YBlogo />
+            <YBlogo className="h-14 w-14" />
             <span className="sr-only">brother + Mission home page</span>
           </Link>
           <button
