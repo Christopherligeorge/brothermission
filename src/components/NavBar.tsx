@@ -24,7 +24,7 @@ export default function NavBar({ settings }: NavBarProps) {
         <div className="flex items-center justify-between">
           <Link href="/" className="z-50" onClick={() => setOpen(false)}>
             <YBlogo />
-            <span className="sr-only">Glisten.ai Home Page</span>
+            <span className="sr-only">brother + Mission home page</span>
           </Link>
           <button
             type="button"

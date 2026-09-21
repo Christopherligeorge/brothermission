@@ -1,3 +1,5 @@
+"use client";
+
 import Script from 'next/script';
 import { PrismicNextLink } from "@prismicio/next"; //always use this for internal links, links to other parts of the applicaiton
 //also makes navigation happen as react rerender instead of full scale browser navigation. 
